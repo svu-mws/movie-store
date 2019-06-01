@@ -1,8 +1,9 @@
 import React from 'react'
+import Star from './Star';
 
 
 export default function Rating({rating}) {
-    const rating = Math.round(rating);
+    const r = Math.round(rating);
     const stars = [...Array(5).keys()].map(x => x + 1);
     return (
         <div className="block-stars">
@@ -11,12 +12,7 @@ export default function Rating({rating}) {
                     stars.map(number => {
                         return (
                             <li key={number}>
-                                <a href="#">
-                                    <i
-                                        className={number >= rating ? 'fa fa-star' : 'fa fa-star-o'}
-                                        aria-hidden="true">
-                                    </i>
-                                </a>
+                                <Star fill={number >= r}/>
                             </li>
                         )
                     })

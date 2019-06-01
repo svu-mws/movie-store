@@ -1,6 +1,6 @@
 import React from 'react'
-import {capitalize} from "src/utils/StringUtils";
-import Rating from "src/components/Rating/Rating";
+import {capitalize} from 'utils/StringUtils';
+import Rating from 'components/Rating';
 
 export default function MovieDetails({id, title, releasedDate, rating}) {
     return (
@@ -13,7 +13,7 @@ export default function MovieDetails({id, title, releasedDate, rating}) {
                 </h6>
             </div>
             <div className="mid-2 agile_mid_2_home">
-                <p>{releasedDate}</p>
+                <p data-test="releasedDate">{releasedDate}</p>
                 <Rating rating={rating}/>
                 <div className="clearfix">
                 </div>
