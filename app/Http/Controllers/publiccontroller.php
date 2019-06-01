@@ -25,16 +25,16 @@ return new movie1($movie);
 
       // return view('movies',compact('movie'),compact('rate'));
     }
-    public function about()
+        public function about()
     {
-      return view('about');
+      return new movie1([]);
     }
     public function contact()
     {
-      return view('contact');
+      return new movie1([]);
     }
     public function contactpost()
     {
-
+      return new movie1([]);
     }
 }
