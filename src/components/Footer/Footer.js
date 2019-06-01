@@ -1,6 +1,10 @@
 import React from 'react'
+import range from 'lodash/range'
+
 
 export default function Footer({genres, latestMovies}) {
+    const currentYear = new Date().getFullYear(), startingYear = currentYear - 5;
+    const years = range(startingYear, currentYear + 1);
     return (
         <React.Fragment>
             <div className="contact-w3ls" id="contact">
@@ -21,12 +25,9 @@ export default function Footer({genres, latestMovies}) {
                         <div className="col-md-4 footer-grid">
                             <h4>Release</h4>
                             <ul>
-                                <li><a href="#" title="Release 2016">2016</a></li>
-                                <li><a href="#" title="Release 2015">2015</a></li>
-                                <li><a href="#" title="Release 2014">2014</a></li>
-                                <li><a href="#" title="Release 2013">2013</a></li>
-                                <li><a href="#" title="Release 2012">2012</a></li>
-                                <li><a href="#" title="Release 2011">2011</a></li>
+                                {
+                                    years.map(year => <li><a href="#" title={`Release ${year}`}>{year}</a></li>)
+                                }
                             </ul>
                         </div>
                         <div className="col-md-4 footer-grid">
