@@ -19,9 +19,9 @@ class publiccontroller extends Controller
   public function singlmovie($id)
     {
 
-      $movie = movie::find($id);
+            $movie = movie::find($id);
 movie1::withoutWrapping();
-return movie1::collection($movie);
+return new movie1($movie);
 
       // return view('movies',compact('movie'),compact('rate'));
     }
