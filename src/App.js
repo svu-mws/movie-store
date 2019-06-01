@@ -1,20 +1,17 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import React, {Suspense, lazy} from 'react';
+import React from 'react';
 
-const Home = lazy(() => import('./routes/Home'));
-const Movie = lazy(() => import('./routes/Movie'));
-const About = lazy(() => import('./routes/About'));
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {Router} from "@reach/router";
+import Home from "./components/Home/Home";
+import Movie from "./components/Movie/Movie";
+
 
 function App() {
     return (
         <Router>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/movie/:id" component={Movie}/>
-                    <Route path="/about" component={About}/>
-                </Switch>
-            </Suspense>
+            <Home path="/"/>
+            <Movie path="/movie/:movieId"/>
         </Router>
     );
 }
