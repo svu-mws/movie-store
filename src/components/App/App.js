@@ -1,9 +1,10 @@
 import React from 'react';
+import './App.module.scss'
+import './popup-box.scss'
+import './zoomslider.scss'
 import {Provider} from 'react-redux'
 import {Router} from '@reach/router';
-import configureStore from '/src/store';
-
-const store = configureStore();
+import store from 'store';
 
 function App() {
     return (

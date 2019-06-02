@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use  App\comment ;
 use Auth;
 use App\movie_rate;
+ use App\Http\Resources\movie as movie1 ;
 class usercontroller extends Controller
 {
     //
@@ -13,13 +14,14 @@ class usercontroller extends Controller
   {
      $this->middleware('auth');
   }
-  public function dashboard()
-  {
-    $chart = new chart;
-      return view('user.dashboard');
-  }
+  // public function dashboard()
+  // {
+  //   $chart = new chart;
+  //     return view('user.dashboard');
+  // }
   public function comments()
   {
+    
     return view('user.comments');
   }
   public function profile()
