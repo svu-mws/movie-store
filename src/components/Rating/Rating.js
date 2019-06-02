@@ -4,7 +4,7 @@ import range from 'lodash/range'
 
 export default function Rating({rating}) {
     const r = Math.round(rating);
-    const stars = range(1, r + 1);
+    const stars = range(1, 6);
     return (
         <div className="block-stars">
             <ul className="w3l-ratings">
