@@ -38,7 +38,7 @@
 			border: 2px solid #02a388;
 		}
       #demo-1 {
-			position: relative; 
+			position: relative;
 			width: 100%;
 			min-height: 658px;
 			background-color: #999;
@@ -46,11 +46,11 @@
 		.demo-inner-content {
 			position: relative;
 			z-index: 2;
-			
+
 		}
-		
+
 	.banner-inner {
-    background: url(../images/1.jpg) no-repeat 0px 0px;
+    background: url(../images/4.jpg) no-repeat 0px 0px;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -66,7 +66,7 @@
 /*-- /responsive --*/
 @media (max-width:1440px){
 	#demo-1 {
-		
+
 		    min-height: 630px;
 	}
 	.zs-enabled .zs-slideshow .zs-bullets .zs-bullet {
@@ -120,7 +120,7 @@
 		width: 100%;
 		text-align: center;
 	}
-	
+
 }
 @media (max-width:800px){
 	#demo-1 {
@@ -151,14 +151,14 @@
 	}
 }
 @media (max-width:736px){
-	
+
 	#demo-1 {
       min-height:450px;
 	}
 
 }
 @media (max-width:640px){
-	
+
 	#demo-1 {
       min-height:400px;
 	}
@@ -168,7 +168,7 @@
 	#demo-1 {
       min-height:390px;
 	}
-	
+
 }
 @media (max-width:480px){
 	#demo-1 {
@@ -182,10 +182,10 @@
 		width: 100%;
 		text-align: center;
 	}
-	
+
 }
 @media (max-width:414px){
-	
+
 }
 @media (max-width:384px){
 
