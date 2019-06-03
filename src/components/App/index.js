@@ -2,7 +2,7 @@ import React from 'react';
 import './App.module.scss'
 import './popup-box.scss'
 import './zoomslider.scss'
-import {Provider} from 'react-redux'
+import {Provider, useDispatch} from 'react-redux'
 import {Router} from '@reach/router';
 import store from 'store';
 import Header from "components/Header";
@@ -12,18 +12,27 @@ import Home from "components/Home"
 import ContactUs from "components/ContactUs";
 import FilterableMovies from "components/FilterableMovies";
 import FilteredMovies, {LayoutType} from "components/FilteredMovies";
+import {GET_ALL_MOVIES} from "redux/actionTypes/moviesActionTypes"
+import {GET_ALL_GENRES} from "redux/actionTypes/genresActionTypes";
 
 const Main = ({children}) => {
     return (
-        <React.Fragment>
+        <>
             <Header/>
             {children}
             <Footer/>
-        </React.Fragment>
+        </>
     );
 };
 
 export default function App() {
+    const dispatch = useDispatch();
+    dispatch({
+        type: GET_ALL_MOVIES
+    });
+    dispatch({
+        type: GET_ALL_GENRES
+    });
     return (
         <Provider store={store}>
             <Router>
