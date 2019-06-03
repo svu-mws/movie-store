@@ -1,5 +1,4 @@
 import React from 'react'
-import Star from "../../Rating/Star/Star";
 
 function MovieTitle({title, description}) {
     return (
@@ -136,7 +135,7 @@ function RecommendedMovies({movies}) {
 export default function Movie({movie}) {
     const {id, title, description, imageUrl, releasedDate, rating, genres, comments, recommendedMovies} = movie;
     return (
-        <div>
+        <div className="agile_featured_movies">
             <MovieTitle description={description} title={title}/>
             <div className="col-md-8 latest-news-agile-left-content">
                 <MovieImage src={imageUrl}/>
