@@ -16,13 +16,13 @@ function MovieImage({src}) {
     );
 }
 
-function MovieDetails({title, description, releaseDate, genres, rating}) {
+function MovieDetails({title, description, releasedDate, genres, rating}) {
     return (
         <div className="player-text side-bar-info">
             <p className="fexi_header">{title}</p>
             <p className="fexi_header_para"><span
                 className="conjuring_w3">Story Line<label>:</label></span>{description}</p>
-            <p className="fexi_header_para"><span>Release On<label>:</label></span>{releaseDate}</p>
+            <p className="fexi_header_para"><span>Release On<label>:</label></span>{releasedDate}</p>
             <p className="fexi_header_para">
                 <span>Genres<label>:</label> </span>
                 <a href="genre.html">Drama</a> |
@@ -109,7 +109,7 @@ function RecommendedMovieCard({title, detail, imageSrc, url, releasedDate}) {
     );
 }
 
-function RecommendedMovies(movies) {
+function RecommendedMovies({movies}) {
     return (
         <div className="agile-info-recent">
             <h4 className="side-t-w3l-agile">More <span>Like</span> This</h4>
@@ -134,14 +134,22 @@ function RecommendedMovies(movies) {
 
 
 export default function Movie({movie}) {
-    const {id, title, description, imageUrl, releasedDate, rating} = movie;
+    const {id, title, description, imageUrl, releasedDate, rating, genres, comments, recommendedMovies} = movie;
     return (
         <div>
             <MovieTitle description={description} title={title}/>
-            <MovieImage/>
-            <MovieDetails/>
-            <MovieComments/>
-            <RecommendedMovies/>
+            <div className="col-md-8 latest-news-agile-left-content">
+                <MovieImage src={imageUrl}/>
+                <MovieComments comments={comments}/>
+            </div>
+            <div className="col-md-4 latest-news-agile-right-content">
+                <MovieDetails title={title}
+                              description={description}
+                              releasedDate={releasedDate}
+                              rating={rating}
+                              genres={genres}/>
+                <RecommendedMovies movies={recommendedMovies}/>
+            </div>
         </div>
     );
 }
