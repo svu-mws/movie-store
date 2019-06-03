@@ -2,7 +2,7 @@ import React from 'react'
 import {capitalize} from "utils/StringUtils";
 import Rating from "components/Rating";
 
-export default function FeaturedMovie({movie}) {
+export default function MainMovie({movie}) {
     const {title, imageUrl, story, releasedDate, genres, rating} = movie;
     return (
         <div className="col-md-5 video_agile_player">

@@ -26,7 +26,7 @@
   <body>
 @include('includes.navigation')
 @yield('content')
-        <!-- Footer -->
+        <!-- Index -->
         @if (auth::user()!=null)
 
         @if (auth::user()->admin=1)

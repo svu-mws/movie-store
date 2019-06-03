@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Index\Http\Controllers;
 
 
-use App\Http\Requests\CreatMovie;
+use Index\Http\Requests\CreatMovie;
 use Illuminate\Http\Request;
-use \App\movie;
-use  App\comment ;
-use \App\user;
-use \App\producer;
-use \App\actor;
-use \App\type;
-use \App\Movies_order;
+use \Index\movie;
+use  Index\comment ;
+use \Index\user;
+use \Index\producer;
+use \Index\actor;
+use \Index\type;
+use \Index\Movies_order;
 use Auth;
 
 class admincontroller extends Controller

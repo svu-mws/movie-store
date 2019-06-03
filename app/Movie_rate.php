@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Movie_rate extends Model
     //
     public  function movie()
     {
-      return $this->belongsto('App\movie');
+      return $this->belongsto('Index\movie');
     }
 }

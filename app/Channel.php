@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +9,6 @@ class Channel extends Model
     //
     public  function user()
     {
-      return $this->belongsto('App\User','user_id');
+      return $this->belongsto('Index\User','user_id');
     }
 }

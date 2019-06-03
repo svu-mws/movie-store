@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Index\Http\Controllers;
 
 use Illuminate\Http\Request;
-use  App\comment ;
+use  Index\comment ;
 use Auth;
-use App\movie_rate;
+use Index\movie_rate;
 class usercontroller extends Controller
 {
     //

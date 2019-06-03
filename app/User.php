@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -39,42 +39,42 @@ class User extends Authenticatable
     ];
     public  function hobbies()
     {
-      return $this->hasmany('App\hobby','user_id');
+      return $this->hasmany('Index\hobby','user_id');
     }
     public  function Fav_producers()
     {
-      return $this->hasmany('App\Fav_producer','user_id');
+      return $this->hasmany('Index\Fav_producer','user_id');
     }
     public  function orders()
     {
-      return $this->hasmany('App\order','user_id');
+      return $this->hasmany('Index\order','user_id');
     }
     public  function comments()
     {
-      return $this->hasmany('App\comment');
+      return $this->hasmany('Index\comment');
     }
     public  function rates()
     {
-      return $this->hasmany('App\rate','user_id');
+      return $this->hasmany('Index\rate','user_id');
     }
     public  function Fav_movies()
     {
-      return $this->hasmany('App\Fav_movie','user_id');
+      return $this->hasmany('Index\Fav_movie','user_id');
     }
     public  function fav_actors()
     {
-      return $this->hasmany('App\fav_actor','user_id');
+      return $this->hasmany('Index\fav_actor','user_id');
     }
     public  function technologies()
     {
-      return $this->hasmany('App\tachnology','user_id');
+      return $this->hasmany('Index\tachnology','user_id');
     }
     public  function channels()
     {
-      return $this->hasmany('App\channel','user_id');
+      return $this->hasmany('Index\channel','user_id');
     }
     public  function criteria()
     {
-      return $this->hasmany('App\criterion','user_id');
+      return $this->hasmany('Index\criterion','user_id');
     }
 }

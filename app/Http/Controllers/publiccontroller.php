@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Index\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\movie ;
- use App\Http\Resources\movie as movie1 ;
-use App\movie_rate;
+use Index\movie ;
+ use Index\Http\Resources\movie as movie1 ;
+use Index\movie_rate;
 class publiccontroller extends Controller
 {
     //

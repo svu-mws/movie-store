@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,10 +9,10 @@ class Fav_producer extends Model
     //
     public function producer()
     {
-      return $this->belongsto('App\Producer');
+      return $this->belongsto('Index\Producer');
     };
     public function user()
     {
-      return $this->belongsto('App\User');
+      return $this->belongsto('Index\User');
     };
 }

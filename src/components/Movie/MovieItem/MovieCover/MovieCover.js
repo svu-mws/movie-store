@@ -1,8 +1,9 @@
 import React from 'react'
+import {Link} from "@reach/router";
 
 export default function MovieCover({id, imageUrl, title}) {
     return (
-        <a href="single.html" className="hvr-sweep-to-bottom">
+        <Link to={`movies/${id}`} className="hvr-sweep-to-bottom">
             <img src={imageUrl}
                  title={title}
                  className="img-responsive"
@@ -12,6 +13,6 @@ export default function MovieCover({id, imageUrl, title}) {
                    aria-hidden="true">
                 </i>
             </div>
-        </a>
+        </Link>
     );
 }

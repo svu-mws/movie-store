@@ -1,9 +1,9 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import App from "./App";
+import Index from "components/App/index";
 
-describe('App', () => {
+describe('Index', () => {
     it('should render without crashing', () => {
-        // const app = mount(<App/>);
+        // const app = mount(<Index/>);
     })
 });

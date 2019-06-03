@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import Star from "./Star";
+import Star from "components/Rating/Star/Star";
 
 describe('Star', () => {
     it('should be filled if fill is true', () => {

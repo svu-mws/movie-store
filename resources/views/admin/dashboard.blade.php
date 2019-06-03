@@ -1,9 +1,9 @@
-namespace App\Http\Controllers;
+namespace Index\Http\Controllers;
 
 use Illuminate\Http\Request;
-use  App\movie ;
-use  App\comment ;
-use  App\user ;
+use  Index\movie ;
+use  Index\comment ;
+use  Index\user ;
 @extends('layouts.admin')
 @section('title')
   Admin Dashboard
@@ -143,21 +143,21 @@ use  App\user ;
                                          <div class="col-20">
                                             <div class="bg-dark p-12 text-white text-center">
                                                <i class="fa fa-plus m-b-5 font-16"></i>
-                                               <h5 class="m-b-0 m-t-5">{{\App\movie::all()->count()}}</h5>
+                                               <h5 class="m-b-0 m-t-5">{{\Index\movie::all()->count()}}</h5>
                                                <small class="font-light">Total movies</small>
                                             </div>
                                         </div>
                                         <div class="col-20 m-t-15">
                                             <div class="bg-dark p-10 text-white text-center">
                                                <i class="fa fa-cart-plus m-b-5 font-16"></i>
-                                               <h5 class="m-b-0 m-t-5">{{\App\Comment::all()->count()}}</h5>
+                                               <h5 class="m-b-0 m-t-5">{{\Index\Comment::all()->count()}}</h5>
                                                <small class="font-light"> comments</small>
                                             </div>
                                         </div>
                                          <div class="col-20 m-t-15">
                                             <div class="bg-dark p-10 text-white text-center">
                                                <i class="fa fa-tag m-b-5 font-16"></i>
-                                               <h5 class="m-b-0 m-t-5">{{\App\user::all()->count()}}</h5>
+                                               <h5 class="m-b-0 m-t-5">{{\Index\user::all()->count()}}</h5>
 
                                                <small class="font-light">USERS</small>
                                             </div>

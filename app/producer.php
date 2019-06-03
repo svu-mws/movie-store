@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +9,6 @@ class producer extends Model
     //
     public function movies()
     {
-      return $this->hasmany('App\movie','movie_id');
+      return $this->hasmany('Index\movie','movie_id');
     }
 }

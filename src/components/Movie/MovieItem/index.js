@@ -5,7 +5,7 @@ import MovieCover from "./MovieCover/MovieCover";
 export default function MovieItem({movie, inSlider = false}) {
     const {id, title, imageUrl, releasedDate, rating, isNew} = movie;
     return (
-        <div className={inSlider? "item" : ""}>
+        <div className={inSlider ? "item" : ""}>
             <div className={"w3l-movie-gride-agile" + inSlider ? " w3l-movie-gride-slider" : ""}>
                 <MovieCover id={id}
                             title={title}

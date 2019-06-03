@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Index;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,10 +11,10 @@ class movie_type extends Model
     //
     public function types()
     {
-      return $this->belongsto('App\type');
+      return $this->belongsto('Index\type');
     };
     public function movies()
     {
-      return $this->belongsto('App\movie');
+      return $this->belongsto('Index\movie');
     };
 }
