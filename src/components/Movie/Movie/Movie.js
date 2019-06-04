@@ -1,6 +1,8 @@
 import React from 'react'
+import {useSelector} from "react-redux";
 
-function MovieTitle({title, description}) {
+function MovieTitle({title = 'Untitled Movie', description}) {
+
     return (
         <div className="inner-agile-w3l-part-head">
             <h3 className="w3l-inner-h-title">{title}</h3>
@@ -10,6 +12,7 @@ function MovieTitle({title, description}) {
 }
 
 function MovieImage({src}) {
+    if (!src) src = 'https://via.placeholder.com/150';
     return (
         <img src={src} alt="" className="img-responsive"/>
     );
@@ -59,13 +62,15 @@ function Comment({date, content, username, userImage,}) {
     );
 }
 
-function MovieComments({comments}) {
+function MovieComments({comments = []}) {
+
     return (
         <div className="comments">
             <div className="response">
+
                 <h4>Comments</h4>
                 {
-                    comments.map(comment => {
+                    comments.length > 0 ? comments.map(comment => {
                         return (
                             <Comment content={comment.content}
                                      date={comment.date}
@@ -73,7 +78,7 @@ function MovieComments({comments}) {
                                      username={comment.username}
                             />
                         )
-                    })
+                    }) : 'No Comments'
 
                 }
 
@@ -108,7 +113,7 @@ function RecommendedMovieCard({title, detail, imageSrc, url, releasedDate}) {
     );
 }
 
-function RecommendedMovies({movies}) {
+function RecommendedMovies({movies = []}) {
     return (
         <div className="agile-info-recent">
             <h4 className="side-t-w3l-agile">More <span>Like</span> This</h4>
@@ -132,22 +137,49 @@ function RecommendedMovies({movies}) {
 }
 
 
-export default function Movie({movie}) {
-    const {id, title, description, imageUrl, releasedDate, rating, genres, comments, recommendedMovies} = movie;
+export default function Movie(props) {
+    const movies = useSelector(state => state.movies);
+    let movie = movies[0] || {};
+    //TODO get by id
+    // const movie = useSelector(state => state.movies).filter(movie => movie.id.includes(props.id));
+
+    //Just For Test
+    movie.title = movie.Movie ? movie.Movie.trim() : '';
+    if (movie) {
+        movie.comments = movie.comments ? movie.comments : [];
+        movie.comments.push(
+            {
+                content: 'content',
+                date: 'date',
+                userImage: 'https://via.placeholder.com/50',
+                username: 'username',
+            }
+        );
+        movie.recommendedMovies = [{
+            title: 'Movie 1',
+            detail: 'Movie Detail',
+            image: 'https://via.placeholder.com/150',
+            releasedDate: '6-6-2006',
+            url: 'url',
+        }];
+
+    }
+
     return (
         <div className="agile_featured_movies">
-            <MovieTitle description={description} title={title}/>
+            <MovieTitle description={movie.description} title={movie.title}/>
+
             <div className="col-md-8 latest-news-agile-left-content">
-                <MovieImage src={imageUrl}/>
-                <MovieComments comments={comments}/>
+                <MovieImage src={movie.imageUrl}/>
+                <MovieComments comments={movie.comments}/>
             </div>
             <div className="col-md-4 latest-news-agile-right-content">
-                <MovieDetails title={title}
-                              description={description}
-                              releasedDate={releasedDate}
-                              rating={rating}
-                              genres={genres}/>
-                <RecommendedMovies movies={recommendedMovies}/>
+                <MovieDetails title={movie.title}
+                              description={movie.description}
+                              releasedDate={movie.releasedDate}
+                              rating={movie.rating}
+                              genres={movie.genres}/>
+                <RecommendedMovies movies={movie.recommendedMovies}/>
             </div>
         </div>
     );

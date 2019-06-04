@@ -12,7 +12,7 @@ export default function Rating({rating}) {
                     stars.map(number => {
                         return (
                             <li key={number}>
-                                <Star fill={number >= r}/>
+                                <Star fill={number <= r}/>
                             </li>
                         )
                     })
