@@ -1,7 +1,7 @@
 import React from 'react'
 import {useSelector} from "react-redux";
 
-function MovieTitle({title = 'Untitled Movie', description}) {
+function MovieTitle({title = 'Untitled Movie', description = 'Description'}) {
 
     return (
         <div className="inner-agile-w3l-part-head">
@@ -12,18 +12,17 @@ function MovieTitle({title = 'Untitled Movie', description}) {
 }
 
 function MovieImage({src}) {
-    if (!src) src = 'https://via.placeholder.com/150';
+    if (!src) src = 'https://via.placeholder.com/1680x800';
     return (
         <img src={src} alt="" className="img-responsive"/>
     );
 }
 
-function MovieDetails({title, description, releasedDate, genres, rating}) {
+function MovieDetails({title = 'title', description = 'description d fkljhsdjkfhsdjklfhjsdhf jkdshkfjhd kjjlkfdh gjkhfdl jgkhfdjkg', releasedDate = 'Feb 3, 2016 ', genres, rating}) {
     return (
         <div className="player-text side-bar-info">
             <p className="fexi_header">{title}</p>
-            <p className="fexi_header_para"><span
-                className="conjuring_w3">Story Line<label>:</label></span>{description}</p>
+            <p className="fexi_header_para"><span>Story Line<label>:</label></span>{description}</p>
             <p className="fexi_header_para"><span>Release On<label>:</label></span>{releasedDate}</p>
             <p className="fexi_header_para">
                 <span>Genres<label>:</label> </span>
@@ -32,11 +31,11 @@ function MovieDetails({title, description, releasedDate, genres, rating}) {
                 <a href="genre.html">Family</a>
             </p>
             <p className="fexi_header_para fexi_header_para1"><span>Star Index<label>:</label></span>
-                <a href="#"><i className="fa fa-star" aria-hidden="true"/></a>
-                <a href="#"><i className="fa fa-star" aria-hidden="true"/></a>
-                <a href="#"><i className="fa fa-star-half-o" aria-hidden="true"/></a>
-                <a href="#"><i className="fa fa-star-o" aria-hidden="true"/></a>
-                <a href="#"><i className="fa fa-star-o" aria-hidden="true"/></a>
+                <a href="#"><i className="fa fa-star" aria-hidden="true"></i></a>
+                <a href="#"><i className="fa fa-star" aria-hidden="true"></i></a>
+                <a href="#"><i className="fa fa-star-half-o" aria-hidden="true"></i></a>
+                <a href="#"><i className="fa fa-star-o" aria-hidden="true"></i></a>
+                <a href="#"><i className="fa fa-star-o" aria-hidden="true"></i></a>
             </p>
         </div>
 
@@ -63,22 +62,20 @@ function Comment({date, content, username, userImage,}) {
 }
 
 function MovieComments({comments = []}) {
-
     return (
         <div className="comments">
             <div className="response">
-
                 <h4>Comments</h4>
                 {
-                    comments.length > 0 ? comments.map(comment => {
-                        return (
-                            <Comment content={comment.content}
+                    comments.length > 0 ? comments.map((comment, index) =>
+                        (
+                            <Comment key={index}
+                                     content={comment.content}
                                      date={comment.date}
                                      userImage={comment.userImage}
                                      username={comment.username}
                             />
-                        )
-                    }) : 'No Comments'
+                        )) : 'No Comments'
 
                 }
 
@@ -119,9 +116,10 @@ function RecommendedMovies({movies = []}) {
             <h4 className="side-t-w3l-agile">More <span>Like</span> This</h4>
             <div className="w3ls-recent-grids">
                 {
-                    movies.map(movie => {
+                    movies.map((movie, index) => {
                         return (
-                            <RecommendedMovieCard title={movie.title}
+                            <RecommendedMovieCard key={index}
+                                                  title={movie.title}
                                                   detail={movie.detail}
                                                   imageSrc={movie.image}
                                                   releasedDate={movie.releasedDate}

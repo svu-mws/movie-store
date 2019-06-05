@@ -1,6 +1,11 @@
 import React from 'react';
 // import './App.module.scss'
-// import './popup-box.scss'
+import 'Resources/css/bootstrap.css';
+import 'Resources/css/popuo-box.css';
+import 'Resources/css/easy-responsive-tabs.css';
+import 'Resources/css/zoomslider.css';
+import 'Resources/css/style.css';
+
 // import './zoomslider.scss'
 import {useDispatch} from 'react-redux'
 import {Router} from '@reach/router';
