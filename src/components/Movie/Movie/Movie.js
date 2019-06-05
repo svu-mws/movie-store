@@ -149,14 +149,14 @@ export default function Movie(props) {
             {
                 content: 'content',
                 date: 'date',
-                userImage: 'https://via.placeholder.com/50',
+                userImage: 'https://via.placeholder.com/100',
                 username: 'username',
             }
         );
         movie.recommendedMovies = [{
             title: 'Movie 1',
             detail: 'Movie Detail',
-            image: 'https://via.placeholder.com/150',
+            image: 'https://via.placeholder.com/100',
             releasedDate: '6-6-2006',
             url: 'url',
         }];
