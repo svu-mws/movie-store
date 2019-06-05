@@ -695,7 +695,7 @@ a.login.reg {
 
 .checkbox input+i:after {
 	content: '';
-	/*background: url("../images/tick.png") no-repeat 4px 3px;*/
+	background: url("../images/tick.png") no-repeat 4px 3px;
 	top: -1px;
 	left: -1px;
 	width: 17px;
@@ -1127,7 +1127,7 @@ p.fexi_header_para1 a i {
 	width: 64px;
 	height: 64px;
 	cursor: pointer;
-	/*background: url('../images/play-button.png') no-repeat 0px 0px;*/
+	background: url('../images/play-button.png') no-repeat 0px 0px;
 	background-size: auto, cover;
 	z-index: 9;
 }
@@ -1139,7 +1139,7 @@ p.fexi_header_para1 a i {
 	width: 64px;
 	height: 64px;
 	cursor: pointer;
-	/*background: url('../images/play-button.png') no-repeat 0px 0px;*/
+	background: url('../images/play-button.png') no-repeat 0px 0px;
 	background-size: auto, cover;
 	z-index: 9;
 }
@@ -1452,7 +1452,7 @@ ul.side-bar-agile {
 }
 
 .side-bar-form input[type="submit"] {
-	/*background: url(../images/search.png) no-repeat 9px 9px #fe423f;*/
+	background: url(../images/search.png) no-repeat 9px 9px #fe423f;
 	width: 44px;
 	height: 41px;
 	border: none;
@@ -2730,7 +2730,7 @@ ul.bottom-links-agile li a {
 	height: 22px;
 	border: none;
 	text-indent: 100%;
-	/*background: url(../images/move-top.png) no-repeat 0px 0px;*/
+	background: url(../images/move-top.png) no-repeat 0px 0px;
 }
 
 
@@ -3016,7 +3016,7 @@ ul.bottom-links-agile li a {
 		width: 64px;
 		height: 64px;
 		cursor: pointer;
-		/*background: url(../images/play-button.png) no-repeat 0px 0px;*/
+		background: url(../images/play-button.png) no-repeat 0px 0px;
 		background-size: auto, cover;
 		z-index: 9;
 	}
